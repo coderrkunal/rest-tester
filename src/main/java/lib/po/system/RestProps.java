@@ -1,5 +1,7 @@
 package lib.po.system;
 
+import java.util.Map;
+
 public class RestProps {
   /*
     protocol: https
@@ -11,8 +13,7 @@ public class RestProps {
   private String protocol;
   private String host;
   private String endpoint;
-
-  private String urlParam;
+  private Map<String, String> urlParam;
 
   public String getProtocol() {
     return protocol;
@@ -26,7 +27,7 @@ public class RestProps {
     return endpoint;
   }
 
-  public String getUrlParam() {
+  public Map<String, String> getUrlParam() {
     return urlParam;
   }
 
@@ -51,8 +52,8 @@ public class RestProps {
       this.endpoint = endpoint; return this;
     }
 
-    private String urlParam;
-    public RestPropsBuilder urlParam(String urlParam){
+    private Map<String, String> urlParam;
+    public RestPropsBuilder urlParam(Map<String, String> urlParam){
       this.urlParam = urlParam; return this;
     }
 
