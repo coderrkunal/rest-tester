@@ -1,6 +1,7 @@
 package utils;
 
 import lib.po.system.RestProps;
+import main.Execute;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,7 +27,9 @@ public class RestApiPropertiesReaderTest {
   }
 
   @Test public void testGetRestPropertiesWithProperties() {
-    File file = new File("/Users/kunal/IdeaProjects/RestTester/src/test/java/utils/dummytest.properties");
+
+    ClassLoader classLoader = getClass().getClassLoader();
+    File file = new File(classLoader.getResource("dummytest.properties").getFile());
     RestApiPropertiesReader apiPropertiesReader = null;
     try {
       apiPropertiesReader = new RestApiPropertiesReader(file);
