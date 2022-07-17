@@ -2,6 +2,7 @@ lib/po/db/entity/TestResult.class
 lib/po/system/Constants$RestPropsConstants.class
 lib/restlib/RestRequestObj$RestTemplateObjBuilder.class
 lib/po/system/RestProps.class
+lib/po/db/action/TestResultOperation.class
 lib/po/system/RestProps$1.class
 main/Execute.class
 lib/restlib/RestResponseObj$ResponseObjBuilder.class
@@ -14,7 +15,6 @@ lib/po/system/RestProps$RestPropsBuilder.class
 utils/PropertiesReader.class
 lib/restlib/RestRequestObj.class
 lib/po/system/Constants$GlobalConstants.class
-lib/po/db/action/Operation.class
 lib/po/db/action/HibernateUtil.class
 lib/restlib/impl/RestGetImpl.class
 lib/po/validator/RequestValidator.class
