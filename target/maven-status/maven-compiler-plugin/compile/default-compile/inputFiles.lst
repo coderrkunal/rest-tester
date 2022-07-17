@@ -5,8 +5,8 @@
 /Users/kunal/IdeaProjects/RestTester/src/main/java/lib/po/db/entity/ResultState.java
 /Users/kunal/IdeaProjects/RestTester/src/main/java/main/Execute.java
 /Users/kunal/IdeaProjects/RestTester/src/main/java/lib/po/db/action/HibernateUtil.java
-/Users/kunal/IdeaProjects/RestTester/src/main/java/lib/po/db/action/Operation.java
 /Users/kunal/IdeaProjects/RestTester/src/main/java/lib/restlib/impl/RestGetImpl.java
+/Users/kunal/IdeaProjects/RestTester/src/main/java/lib/po/db/action/TestResultOperation.java
 /Users/kunal/IdeaProjects/RestTester/src/main/java/lib/po/validator/RequestValidator.java
 /Users/kunal/IdeaProjects/RestTester/src/main/java/lib/po/db/entity/TestResult.java
 /Users/kunal/IdeaProjects/RestTester/src/main/java/utils/PropertiesReader.java
