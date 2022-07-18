@@ -1,7 +1,6 @@
 package utils;
 
 import lib.po.system.RestProps;
-import main.Execute;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,7 +22,7 @@ public class RestApiPropertiesReaderTest {
     Assert.assertNotNull(restProps.getProtocol());
     Assert.assertNotNull(restProps.getHost());
     Assert.assertNotNull(restProps.getEndpoint());
-    Assert.assertNotNull(restProps.getUrlParam());
+    Assert.assertNotNull(restProps.getUrlParamWithType());
   }
 
   @Test public void testGetRestPropertiesWithProperties() {
@@ -42,6 +41,6 @@ public class RestApiPropertiesReaderTest {
     Assert.assertNotNull(restProps.getProtocol());
     Assert.assertNotNull(restProps.getHost());
     Assert.assertNotNull(restProps.getEndpoint());
-    Assert.assertNotNull(restProps.getUrlParam());
+    Assert.assertNotNull(restProps.getUrlParamWithType());
   }
 }

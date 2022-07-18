@@ -35,11 +35,11 @@ public class RestApiPropertiesReader extends PropertiesReader{
     Map<String, String> urlParamMap = new HashMap<>();
     if(urlParamList != null){
       Scanner scanner = new Scanner(urlParamList);
-      scanner.useDelimiter(",");
+      scanner.useDelimiter(";");
       while(scanner.hasNext()){
         String param = scanner.next();
-        int idx = param.indexOf(":");
-        urlParamMap.put(param.substring(0, idx), param.substring(idx+1));
+        String[] nameType = param.split(":");
+        urlParamMap.put(nameType[0], nameType[1]);
       }
     }
 
@@ -48,6 +48,7 @@ public class RestApiPropertiesReader extends PropertiesReader{
           .host(properties.getProperty("host", Constants.RestPropsConstants.RESTPROPS_DEFAULT_HOST))
           .endpoint(properties.getProperty("endpoint", Constants.RestPropsConstants.RESTPROPS_DEFAULT_ENDPOINT))
           .urlParam(urlParamMap)
+          .setCount(Integer.valueOf(properties.getProperty("count", Constants.RestPropsConstants.RESTPROPS_DEFAULT_COUNT)))
           .build();
   }
 }

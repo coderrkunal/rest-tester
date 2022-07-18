@@ -56,7 +56,7 @@ public class RestRequestObj {
       this.host = host; return this;
     }
 
-    public RestTemplateObjBuilder setProtocol(String protocol) {
+    public RestTemplateObjBuilder   setProtocol(String protocol) {
       this.protocol = protocol; return this;
     }
 

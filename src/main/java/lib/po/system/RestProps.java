@@ -13,7 +13,12 @@ public class RestProps {
   private String protocol;
   private String host;
   private String endpoint;
-  private Map<String, String> urlParam;
+  private Map<String, String> urlParamWithType;
+  private Integer count;
+
+  public Integer getCount() {
+    return count;
+  }
 
   public String getProtocol() {
     return protocol;
@@ -27,8 +32,8 @@ public class RestProps {
     return endpoint;
   }
 
-  public Map<String, String> getUrlParam() {
-    return urlParam;
+  public Map<String, String> getUrlParamWithType() {
+    return urlParamWithType;
   }
 
   private RestProps(){
@@ -57,12 +62,19 @@ public class RestProps {
       this.urlParam = urlParam; return this;
     }
 
+    private Integer count;
+
+    public RestPropsBuilder setCount(Integer count) {
+      this.count = count; return this;
+    }
+
     public RestProps build(){
       RestProps restProps = new RestProps();
       restProps.protocol = this.protocol;
       restProps.host = this.host;
       restProps.endpoint = this.endpoint;
-      restProps.urlParam = this.urlParam;
+      restProps.urlParamWithType = this.urlParam;
+      restProps.count = this.count;
       return restProps;
     }
   }

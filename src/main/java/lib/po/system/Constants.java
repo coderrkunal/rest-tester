@@ -13,6 +13,7 @@ public interface Constants {
     String RESTPROPS_DEFAULT_PROTOCOL = "https://";
     String RESTPROPS_DEFAULT_HOST = "";
     String RESTPROPS_DEFAULT_ENDPOINT = "/";
+    String RESTPROPS_DEFAULT_COUNT = "10";
     Map<String, String> RESTPROPS_DEFAULT_URL_PARAM = new HashMap<>();
   }
 }
