@@ -2,6 +2,11 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="asr-releases" />
+      <option name="name" value="asr release repo" />
+      <option name="url" value="https://artifactory-uw2.adobeitc.com/artifactory/maven-asr-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="maven-est" />
       <option name="name" value="maven-est" />
       <option name="url" value="https://artifactory-uw2.adobeitc.com/artifactory/maven-est-public-release/" />
