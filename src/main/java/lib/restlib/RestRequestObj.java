@@ -1,20 +1,26 @@
 package lib.restlib;
 
+import lombok.ToString;
+
 import java.util.Map;
 
+@ToString
 public class RestRequestObj {
   private final String host;
   private final String protocol;
   private final String endpoint;
+  private final String method;
   private final Map<String, String> headers;
   private final Map<String, String> reqParam;
   private final String jsonBody;
 
-  public RestRequestObj(String host, String protocol, String endpoint, Map<String, String> headers, Map<String, String> reqParam,
-      String jsonBody) {
+  public RestRequestObj(String host, String protocol, String endpoint, String method,
+                        Map<String, String> headers, Map<String, String> reqParam,
+                        String jsonBody) {
     this.host = host;
     this.protocol = protocol;
     this.endpoint = endpoint;
+    this.method = method;
     this.headers = headers;
     this.reqParam = reqParam;
     this.jsonBody = jsonBody;
@@ -52,6 +58,8 @@ public class RestRequestObj {
     private Map<String, String> reqParam;
     private String jsonBody;
 
+    private String method;
+
     public RestTemplateObjBuilder setHost(String host) {
       this.host = host; return this;
     }
@@ -62,6 +70,10 @@ public class RestRequestObj {
 
     public RestTemplateObjBuilder setEndpoint(String endpoint) {
       this.endpoint = endpoint; return this;
+    }
+
+    public RestTemplateObjBuilder setMethod(String method){
+      this.method = method; return this;
     }
 
     public void setHeaders(Map<String, String> headers) {
@@ -77,7 +89,7 @@ public class RestRequestObj {
     }
 
     public RestRequestObj build(){
-      return new RestRequestObj(host, protocol, endpoint, headers, reqParam, jsonBody);
+      return new RestRequestObj(host, protocol, endpoint, method, headers, reqParam, jsonBody);
     }
   }
 }

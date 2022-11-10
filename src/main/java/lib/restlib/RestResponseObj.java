@@ -1,10 +1,12 @@
 package lib.restlib;
 
+import lombok.ToString;
 import org.apache.http.Header;
 import org.apache.http.StatusLine;
 
 import java.util.List;
 
+@ToString
 public class RestResponseObj {
   private final StatusLine statusLine;
   private final List<Header> respHeaders;

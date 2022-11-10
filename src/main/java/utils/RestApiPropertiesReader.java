@@ -47,6 +47,7 @@ public class RestApiPropertiesReader extends PropertiesReader{
           .protocol(properties.getProperty("protocol", Constants.RestPropsConstants.RESTPROPS_DEFAULT_PROTOCOL))
           .host(properties.getProperty("host", Constants.RestPropsConstants.RESTPROPS_DEFAULT_HOST))
           .endpoint(properties.getProperty("endpoint", Constants.RestPropsConstants.RESTPROPS_DEFAULT_ENDPOINT))
+            .method(properties.getProperty("method", Constants.RestPropsConstants.RESTPROPS_DEFAULT_METHOD))
           .urlParam(urlParamMap)
           .setCount(Integer.valueOf(properties.getProperty("count", Constants.RestPropsConstants.RESTPROPS_DEFAULT_COUNT)))
           .build();

@@ -42,7 +42,20 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.13.3</version>
+            <version>${jackson-core-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 
@@ -70,12 +83,12 @@
 
 
     <properties>
-        <java-version>1.8</java-version>
+        <java-version>11</java-version>
         <testng-version>7.4.0</testng-version>
         <apache-httpclient>4.5.13</apache-httpclient>
         <h2-version>2.1.214</h2-version>
         <hibernate-version>5.6.9.Final</hibernate-version>
-        <jackson-core-version>2.13.3</jackson-core-version>
+        <jackson-core-version>2.14.0</jackson-core-version>
         <jackson-databind-version>2.13.3</jackson-databind-version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -86,6 +99,11 @@
             <id>central</id>
             <name>Maven Repository Switchboard</name>
             <url>http://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>maven_central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
         </repository>
     </repositories>
 

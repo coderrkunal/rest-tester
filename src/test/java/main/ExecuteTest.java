@@ -5,6 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import javax.transaction.NotSupportedException;
 import java.io.File;
 import java.io.IOException;
 
@@ -22,11 +23,10 @@ public class ExecuteTest {
 
   @Test public void testProcess() {
     //Test asserts
-    Execute execute = null;
     try {
-      execute = new Execute();
+      Execute execute = new Execute();
       execute.process();
-    }catch (IOException e) {
+    }catch (IOException | NotSupportedException e) {
       Assert.fail("testProcess Failed with : " + e.getMessage());
       e.printStackTrace();
     }
@@ -34,18 +34,17 @@ public class ExecuteTest {
 
   @Test public void testProcessWithPropsFile() {
     //Test asserts
-    Execute execute = null;
     String resourceName = "temp.txt";
     try {
       ClassLoader classLoader = getClass().getClassLoader();
       File file = new File(classLoader.getResource(resourceName).getFile());
       String absolutePath = file.getAbsolutePath();
-      execute = new Execute(absolutePath);
-    } catch (IOException e) {
+      Execute execute = new Execute(absolutePath);
+      execute.process();
+    } catch (IOException | NotSupportedException e) {
       Assert.fail("testProcessWithPropsFile Failed with : " + e.getMessage());
       e.printStackTrace();
     }
-    execute.process();
   }
 
   @Test public void testProcessFail() {

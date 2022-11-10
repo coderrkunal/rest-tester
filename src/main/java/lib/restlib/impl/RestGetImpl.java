@@ -14,14 +14,14 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class RestGetImpl implements RestCall {
-  @Override public RestResponseObj doCallSuccess(RestRequestObj restRequestObj) {
+  @Override
+  public RestResponseObj doCallSuccess(RestRequestObj restRequestObj) {
     RestResponseObj restResponseObj = null;
     try {
       restResponseObj = this.callGet(restRequestObj);
     } catch (IOException ioe){
       //TODO
     }
-
     return restResponseObj;
   }
 
@@ -37,6 +37,7 @@ public class RestGetImpl implements RestCall {
   }
 
   private RestResponseObj callGet(final RestRequestObj restRequestObj) throws IOException {
+    System.out.println("RequestObj: " + restRequestObj);
     RestResponseObj restResponseObj;
     try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
       HttpGet request = new HttpGet(restRequestObj.constructAndGetURI());
@@ -60,6 +61,7 @@ public class RestGetImpl implements RestCall {
     } catch (URISyntaxException e) {
       throw new RuntimeException(e);
     }
+    System.out.println("ResponseObj: " + restResponseObj);
     return restResponseObj;
   }
 }

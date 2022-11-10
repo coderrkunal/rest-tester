@@ -36,6 +36,7 @@ public class RestPostImpl implements RestCall {
   }
 
   private RestResponseObj callPost(final RestRequestObj restRequestObj) throws IOException {
+    System.out.println("RestRequestObj: " + restRequestObj);
     RestResponseObj restResponseObj;
     try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
       HttpPost request = new HttpPost(restRequestObj.constructAndGetURI());
@@ -62,6 +63,7 @@ public class RestPostImpl implements RestCall {
     } catch (URISyntaxException e) {
       throw new RuntimeException(e);
     }
+    System.out.println("RestResponseObj: " + restResponseObj);
     return restResponseObj;
   }
 }

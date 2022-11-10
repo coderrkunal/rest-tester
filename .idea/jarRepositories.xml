@@ -7,6 +7,11 @@
       <option name="url" value="https://artifactory-uw2.adobeitc.com/artifactory/maven-asr-release" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="maven_central" />
+      <option name="name" value="Maven Central" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="maven-est" />
       <option name="name" value="maven-est" />
       <option name="url" value="https://artifactory-uw2.adobeitc.com/artifactory/maven-est-public-release/" />

@@ -13,6 +13,7 @@ public class RestRequestObjGenerator {
         new RestRequestObj.RestTemplateObjBuilder()
             .setHost(restProps.getHost())
             .setEndpoint(restProps.getEndpoint())
+            .setMethod(restProps.getMethod())
             .setProtocol(restProps.getProtocol());
 
     while(!done){
