@@ -32,14 +32,14 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="maven-experienceplatform-release" />
-      <option name="name" value="Experience Platform Release Repository" />
-      <option name="url" value="https://artifactory.corp.adobe.com/artifactory/maven-experienceplatform-release" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="snapshots" />
       <option name="name" value="libs-snapshots" />
       <option name="url" value="https://artifactory-uw2.adobeitc.com/artifactory/libs-snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-experienceplatform-release" />
+      <option name="name" value="Experience Platform Release Repository" />
+      <option name="url" value="https://artifactory.corp.adobe.com/artifactory/maven-experienceplatform-release" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven-experienceplatform-release-local" />

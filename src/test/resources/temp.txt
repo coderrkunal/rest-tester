@@ -2,4 +2,4 @@ protocol=https
 host=httpbin.org/
 method=get
 endpoint=/get
-count=1
+count=2

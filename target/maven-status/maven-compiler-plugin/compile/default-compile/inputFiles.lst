@@ -2,6 +2,7 @@
 /Users/kunal/projects/rest-tester/src/main/java/lib/restlib/RestRequestObjGenerator.java
 /Users/kunal/projects/rest-tester/src/main/java/lib/po/db/action/HibernateUtil.java
 /Users/kunal/projects/rest-tester/src/main/java/lib/restlib/impl/RestGetImpl.java
+/Users/kunal/projects/rest-tester/src/main/java/lib/restlib/mixer/ParameterMixer.java
 /Users/kunal/projects/rest-tester/src/main/java/lib/restlib/impl/RestPostImpl.java
 /Users/kunal/projects/rest-tester/src/main/java/lib/po/system/Constants.java
 /Users/kunal/projects/rest-tester/src/main/java/lib/po/db/entity/TestResult.java
